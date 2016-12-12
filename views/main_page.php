@@ -10,7 +10,7 @@
 	<div class="left-bar">
 		<div class="home">
 			<br />
-			<p id="logo"><a id="home-button" href="#main-page"><span class="glyphicon glyphicon-home"></span> BrandPronounce</a></p>
+			<p id="logo"><a id="home-button" href="#"><span class="glyphicon glyphicon-home"></span> BrandPronounce</a></p>
 			<br />
 			<input id="search-field" type="text" placeholder="搜索一下">
 			<br>

@@ -4,9 +4,11 @@
 		<hr>
 		<div id="home-git">
 			<span>Github：</span>
-			<button id="github" class="btn btn-link home-btn-link" data-toggle="tooltip" data-placement="auto right" title="bluebreeze0812">
+			<a id="github" class="btn btn-link home-btn-link" 
+			href="https://github.com/bluebreeze0812/BrandPronounce" target="_blank" 
+			data-toggle="tooltip" data-placement="auto right" title="bluebreeze0812">
 				<i class="fa fa-github"></i>
-			</button>
+			</a>
 		</div>
 		
 		<div id="home-share">
