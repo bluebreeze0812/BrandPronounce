@@ -1,0 +1,75 @@
+.home-content > div {
+	margin: 30px 0px;
+}
+
+#home-title {
+	font-size: 4.5em;
+	font-weight: bold;
+}
+
+#home-git span, #home-share span, #home-contact span{
+	display: block;
+	padding: 3px 0px 3px 8px;
+	border-left: 4px #3399FF solid;
+	margin: 13px 0;
+	font-size: 2em;
+}
+
+.home-btn-link {
+	text-decoration: none !important;
+	font-size: 40px;
+}
+
+#github:hover, #github:active {
+	color: #333333;
+}
+
+#google-plus:hover, #google-plus:active {
+	color: #DE5145;
+}
+
+#facebook {
+	font-size: 36px;
+}
+
+#facebook:hover, #facebook:active {
+	color: #415E9B;
+}
+
+#twitter:hover, #twitter:active {
+	color: #1DA1F2;
+}
+
+#qq {
+	font-size: 33px;
+}
+
+#qq:hover, #qq:active {
+	color: #14B9F6;
+}
+
+#home-blog a {
+	font-size: 1.5em;
+}
+
+#home-brief p {
+	font-size: 1.5em;
+	text-indent: 42px;
+	line-height: 180%;
+	letter-spacing: 1px;
+}
+
+#home-img {
+	max-width: 100%;
+}
+
+.caption {
+	font-size: 1.5em;
+	text-align: center;
+	padding: 5px !important;
+}
+
+footer > p {
+	color: grey;
+	font-size: 1.3em;
+}

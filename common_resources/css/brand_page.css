@@ -1,0 +1,104 @@
+.brand-content div {
+	margin: 30px 0px;
+}
+
+#brand-title {
+	font-size: 4.5em;
+	font-weight: bold;
+}
+
+#brand-pro span, #brand-web span, #brand-brief span{
+	display: block;
+	padding: 3px 0px 3px 8px;
+	border-left: 4px #3399FF solid;
+	margin: 13px 0;
+	font-size: 2em;
+}
+
+#brand-phonetic {
+	display: inline !important;
+	padding: 0 !important;
+	border: none !important;
+	margin: 0 !important;
+	font-size: 2.25em !important;
+}
+
+.btn-link {
+	text-decoration: none !important;
+}
+
+#phonetic-content {
+	display: inline !important;
+	padding: 0 !important;
+	border: none !important;
+	margin: 0 !important;
+	font-size: 1.5em !important;
+	color: grey;
+}
+
+#brand-web a {
+	font-size: 1.5em;
+}
+
+#brand-brief p {
+	font-size: 1.5em;
+	text-indent: 42px;
+	line-height: 180%;
+	letter-spacing: 1px;
+}
+
+#brand-baike {
+	font-size: 1.25em !important;
+	float: right;
+	color: grey;
+}
+
+.previous {
+	background: rgb(51, 153, 255); /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left,rgba(51,153,255,1),rgba(51,153,255,0)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(right,rgba(51,153,255,1),rgba(51,153,255,0)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(right,rgba(51,153,255,1),rgba(51,153,255,0)); /*Fx 3.6-15*/
+	background: linear-gradient(to right, rgba(51,153,255,1), rgba(51,153,255,0)); /*Standard*/
+	
+	transition: background-color 0.5s;
+	text-align: left;
+	color: white;
+	padding: 15px;
+	font-size: 1.5em;
+	border: none;
+	border-radius: 5px;
+}
+
+.previous:hover {
+	background-color: rgb(51, 153, 255);
+}
+
+.next {
+	background: rgb(51, 153, 255); /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(right,rgba(51,153,255,1),rgba(51,153,255,0)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(left,rgba(51,153,255,1),rgba(51,153,255,0)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(left,rgba(51,153,255,1),rgba(51,153,255,0)); /*Fx 3.6-15*/
+	background: linear-gradient(to left, rgba(51,153,255,1), rgba(51,153,255,0)); /*Standard*/
+	
+	transition: background-color 0.5s;
+	text-align: right;
+	color:white;
+	padding: 15px;
+	font-size: 1.5em;
+	border: none;
+	border-radius: 5px;
+}
+
+.next:hover {
+	background-color: rgb(51, 153, 255);
+}
+
+#brand-img {
+	max-width: 100%;
+}
+
+.caption {
+	font-size: 1.5em;
+	text-align: center;
+	padding: 5px !important;
+}
