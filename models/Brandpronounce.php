@@ -93,7 +93,7 @@ class Brandpronounce extends CI_Model {
 		$param = urldecode($param);
 		$param = trim($param);
 		
-		if (preg_match('/^\p{Han}+$/u', $param))
+		if (preg_match('/^\p{Han}+$/iu', $param))
 		{
 			$query = $this->db->select()->where('name', $param)->get('brand');
 			$arr = $query->result_array();
@@ -112,7 +112,7 @@ class Brandpronounce extends CI_Model {
 				return $arr;
 			}
 		}
-		elseif (preg_match('/^\p{L}+$/i', $param))
+		elseif (preg_match('/^\p{L}+$/iu', $param))
 		{
 			$query = $this->db->select()->where('eng_name', $param)->get('brand');
 			$arr = $query->result_array();
@@ -136,7 +136,8 @@ class Brandpronounce extends CI_Model {
 			$sql = "SELECT * FROM brand WHERE MATCH(brief) AGAINST('{$param}');";
 			$query = $this->db->query($sql);
 			$arr = $query->result_array();
-			return count($arr);
+			$query->free_result();
+			return $arr;
 		}
 	}
 
