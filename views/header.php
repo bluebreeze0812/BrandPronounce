@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="brandpronounce, brand, speak brand, pronouncebrand">
 <meta name="Description" content="Teach how to pronounce luxury brands correctly.">
+<!--载入favicon,因为ico文件在根目录所以不用这行代码也行-->
+<!--<link rel="icon" href="<?=base_url('favicon.ico');?>">-->
 <!--加载bootstrap和jquery-->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
