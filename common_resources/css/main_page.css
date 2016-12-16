@@ -2,8 +2,21 @@
 	box-sizing: border-box;
 }
 
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYH.TTC');
+}
+
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYHBD.TTC');
+	font-weight: bold;
+}
+
+
 html, body {
 	height: 100%;
+	font-family: msyh;
 }
 
 .left-bar {
@@ -14,7 +27,7 @@ html, body {
 }
 
 .content-show {
-	height: 100%;
+	font-family: msyh;
 }
 
 .home {

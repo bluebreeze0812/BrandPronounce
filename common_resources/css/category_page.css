@@ -1,6 +1,22 @@
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYH.TTC');
+}
+
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYHBD.TTC');
+	font-weight: bold;
+}
+
+.category-content {
+	font-family: msyh;
+}
+
 .content-show {
 	width: 75%;
 	margin-left: 25%;
+	font-family: msyh;
 }
 
 .content-show .brand-group {
@@ -8,7 +24,7 @@
 }
 
 .content-show .capital {
-	font-family: Monospace;
+	font-family: msyh;
 	font-size: 3em;
 	color: grey;
 	display: block;	
