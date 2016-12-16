@@ -1,6 +1,21 @@
 <div class="row">
-	<div class="col-sm-8 home-content">
-		<h1 id="home-title">Home</h1>
+
+	<div class="col-sm-4 col-sm-push-8">
+		<div class="thumbnail">
+			<img id="home-img" src="<?php echo base_url('imgs/Leo.png');?>" 
+			title="Developer" alt="Leo Wang">
+			<div class="caption">
+				<span>
+					<img src="<?php echo base_url('32_flags/China.png');?>"
+					title="中国" alt="中国">
+				</span>&nbsp;
+				Leo Wang
+			</div>
+		</div>
+	</div>
+	
+	<div class="home-content col-sm-8 col-sm-pull-4">
+		<h1 id="home-title">Welcome</h1>
 		<hr>
 		<div id="home-git">
 			<span>Github：</span>
@@ -45,18 +60,4 @@
 				
 	</div>
 	
-	
-	<div class="col-sm-4">
-		<div class="thumbnail">
-			<img id="home-img" src="<?php echo base_url('imgs/Leo.png');?>" 
-			title="Developer" alt="Leo Wang">
-			<div class="caption">
-				<span>
-					<img src="<?php echo base_url('32_flags/China.png');?>"
-					title="中国" alt="中国">
-				</span>&nbsp;
-				Leo Wang
-			</div>
-		</div>
-	</div>
 </div>

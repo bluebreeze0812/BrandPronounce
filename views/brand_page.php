@@ -1,23 +1,7 @@
 <div class="brand-content">
 
-	<div class="specific-zone">
-		<div class='text-zone'>
-			<h1 id="brand-title"><?=$specific['eng_name'];?></h1>
-			<hr>
-			<div id="brand-pro"><span>读音：</span>
-				<button class="btn btn-link">
-					<span id="brand-phonetic" class="glyphicon glyphicon-volume-up"></span>
-				</button>
-				<span id="phonetic-content"><?=$specific['phonetic'];?></span>
-			</div>
-		
-			<div id="brand-web">
-				<span>官网：</span>
-				<a href="<?=$specific['website'];?>" target="_blank" 
-				title="访问<?=$specific['name'];?>中国"><?=$specific['website'];?></a>
-			</div>
-		</div>
-		<div class='image-zone'>
+	<div class="specific-zone row">
+		<div class="col-sm-4 col-sm-push-8">
 			<?php
 				$dir = '/var/www/html/ci/imgs/';
 				$dir_arr = scandir($dir);
@@ -41,8 +25,24 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	
+		<div class="col-sm-8 col-sm-pull-4">
+			<h1 id="brand-title"><?=$specific['eng_name'];?></h1>
+			<hr>
+			<div id="brand-pro"><span>读音：</span>
+				<button class="btn btn-link">
+					<span id="brand-phonetic" class="glyphicon glyphicon-volume-up"></span>
+				</button>
+				<span id="phonetic-content"><?=$specific['phonetic'];?></span>
+			</div>
+	
+			<div id="brand-web">
+				<span>官网：</span>
+				<a href="<?=$specific['website'];?>" target="_blank" 
+				title="访问<?=$specific['name'];?>中国"><?=$specific['website'];?></a>
+			</div>
+		</div>
+	</div>
 		
 	<div class="brief-zone">
 		<div id="brand-brief"><span>简介：</span>
@@ -64,72 +64,18 @@
 			map.addControl(new BMap.MapTypeControl());
 			map.addControl(new BMap.GeolocationControl());
 			
-			
 			var city = new BMap.LocalCity({
 				renderOptions:{map:map}
 			});
 			city.get();
 			
-			
-			function returnPanel(result) {
-				for (var i = 0; i < result.getCurrentNumPois(); i++) {
-					var poi = result.getPoi(i);
-					var content = "地址：" + poi.address;
-					if (poi.phoneNumber) {
-						content += "<br>" + "电话：" + poi.phoneNumber;
-					}
-					var location = poi.point;
-					var location2 = new BMap.Point(location.lng, location.lat);
-					var title = poi.title;
-					//alert(content + "\n" + location.lng + "," + location.lat)
-					
-					
-					
-					var searchInfoWindow = null;
-					searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
-						title  : title,      //标题
-						width  : 400,             //宽度
-						height : 50,              //高度
-						panel  : "result",         //检索结果面板
-						enableAutoPan : true,     //自动平移
-						searchTypes   :[
-								BMAPLIB_TAB_TO_HERE,  //到这里去
-							 	BMAPLIB_TAB_FROM_HERE, //从这里出发
-								BMAPLIB_TAB_SEARCH  //周边检索
-						]
-					});
-					
-					var marker = new BMap.Marker(poi.point); //创建marker对象
-				    
-				    
-					marker.addEventListener("click", function(e){
-						searchInfoWindow.open(marker);
-					})
-					
-					map.addOverlay(marker); //在地图中添加marker
-					
-					
-					
-				}
-			}
-			
-			
-			
-			
 			var brand_search = new BMap.LocalSearch(map, {
 				renderOptions:{map:map, panel:"result", selectFirstResult:false}, pageCapacity:5
 			});
 			
-			
-			
 			var search_str = $("#zh-name").text();
-			
 			brand_search.search(search_str);
-			
-			
 		</script>
-		<style>
-		</style>
 	</div>
 	
 	<div class="navigation-zone">
