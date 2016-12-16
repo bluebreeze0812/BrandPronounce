@@ -143,15 +143,26 @@ html, body {
 	border-radius: 0 !important;
 }
 
-#cell-search {
+#pad-search {
+	display: inline-block;
 	margin-top: 9.5px;
 	border-radius: 5px;
 	width: 130px;
 	transition: width 0.5s;
 }
 
-#cell-search:focus {
+#pad-search:focus {
 	width: 200px;
+}
+
+#for-phone {
+	display: none;
+}
+
+#phone-search {
+	width: 90%;
+	margin-left: 5%;
+	border-radius: 5px;
 }
 
 /*For small screen*/
@@ -167,5 +178,14 @@ html, body {
 	.content-show {
 		width: 100%;
 		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 363px) {
+	#for-pad {
+		display: none;
+	}
+	#for-phone {
+		display: inline-block;
 	}
 }

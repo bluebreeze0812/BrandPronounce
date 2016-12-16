@@ -72,10 +72,28 @@ $(document).ready(function() {
 		}
 	});
 	
-	$("#cell-search").keyup(function(event) {
+	$("#pad-search").keyup(function(event) {
 	//event.keyCode可能无法在火狐下工作。所以采用以下写法。
 		var keyCode = event.which || event.keyCode;
-		var query = $("#cell-search").val();
+		var query = $("#pad-search").val();
+		query = encodeURI(query);
+		if (keyCode === 13) {
+			$(".content-show").load(base_url + "load-search/" + query, function(responseTxt, statusTxt, xhr) {
+				clear_outline();				
+				$(".sp-a").click(function() {
+					var id = $(this).find("span").text();
+					$(".content-show").load(base_url + "load_brand/" + id, function(responseTxt, statusTxt, xhr) {
+						clear_outline();
+					});
+				});
+			});
+		}
+	});
+	
+	$("#phone-search").keyup(function(event) {
+	//event.keyCode可能无法在火狐下工作。所以采用以下写法。
+		var keyCode = event.which || event.keyCode;
+		var query = $("#phone-search").val();
 		query = encodeURI(query);
 		if (keyCode === 13) {
 			$(".content-show").load(base_url + "load-search/" + query, function(responseTxt, statusTxt, xhr) {

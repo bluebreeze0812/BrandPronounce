@@ -64,11 +64,14 @@
 		    <span class="icon-bar"></span>                        
 		  </button>
 		  <a class="navbar-brand home-button" href="#">BrandPronounce</a>
-		  <div class="input-group" style="display:inline-block;">
-				<input type="text" id="cell-search" class="form-control" placeholder="Search"> 
+		  <div id="for-pad" class="input-group">
+				<input type="text" id="pad-search" class="form-control" placeholder="Search"> 
   			</div>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
+			<div id="for-phone" class="input-group nav navbar-nav">
+				<input type="text" id="phone-search" class="form-control" placeholder="Search"> 
+			</div>
 		  <ul class="nav navbar-nav navbar-right">
 		    <li class="dropdown">
 		      <a class="dropdown-toggle" data-toggle="dropdown" href="#">按类别 <span class="caret"></span></a>
