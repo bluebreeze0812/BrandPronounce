@@ -10,7 +10,7 @@
 	<div class="left-bar">
 		<div class="home">
 			<br />
-			<p id="logo"><a id="home-button" href="#"><span class="glyphicon glyphicon-home"></span> BrandPronounce</a></p>
+			<p id="logo"><a class="home-button" href="#"><span class="glyphicon glyphicon-home"></span> BrandPronounce</a></p>
 			<br />
 			<input id="search-field" type="text" placeholder="搜索一下">
 			<br>
@@ -31,6 +31,7 @@
 							<?php foreach ($category as $item): ?>
 								<?="<a class='list-group-item category-button' href='#'>$item</a>";?>
 							<?php endforeach;?>
+						
 						</div>
 					</div>
 				</div>
@@ -53,6 +54,45 @@
 			</div>
 		</div>
 	</div>
+	
+	<nav id="cell-nav" class="navbar navbar-inverse">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>                        
+		  </button>
+		  <a class="navbar-brand home-button" href="#">BrandPronounce</a>
+		  <div class="input-group" style="display:inline-block;">
+				<input type="text" id="cell-search" class="form-control" placeholder="Search"> 
+  			</div>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav navbar-right">
+		    <li class="dropdown">
+		      <a class="dropdown-toggle" data-toggle="dropdown" href="#">按类别 <span class="caret"></span></a>
+		      <ul class="dropdown-menu">
+		      	<?php foreach ($category as $item): ?>
+					<?="<li><a class='category-button' href='#'>$item</a></li>";?>
+				<?php endforeach;?>
+		      </ul>
+		    </li>
+		  </ul>
+		  <ul class="nav navbar-nav navbar-right">
+		    <li class="dropdown">
+		      <a class="dropdown-toggle" data-toggle="dropdown" href="#">按国家 <span class="caret"></span></a>
+		      <ul class="dropdown-menu">
+		        <?php foreach ($country as $item):?>
+					<?="<li><a class='country-button' href='#'>$item</a></li>";?>
+				<?php endforeach;?>
+		      </ul>
+		    </li>
+		  </ul>
+
+		</div>
+	  </div>
+	</nav>
 	
 	<div class="container-fluid content-show">
 	</div>

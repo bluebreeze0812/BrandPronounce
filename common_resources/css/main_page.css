@@ -1,28 +1,53 @@
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
+
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYH.TTC');
+}
+
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYHBD.TTC');
+	font-weight: bold;
+}
+
 
 html, body {
 	height: 100%;
+	font-family: msyh;
 }
 
+/*For big screen*/
 .left-bar {
 	background: linear-gradient(to bottom, rgba(51,153,255,1), rgba(51,153,255,0));
 	width: 25%;
 	float: left;
 	height: 100%;
+	position: fixed;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.left-bar::-webkit-scrollbar {
+    width: 0px;
 }
 
 .content-show {
-	height: 100%;
+	font-family: msyh;
+	width: 75%;
+	margin-left: 25%;
 }
 
 .home {
-	background: rgb(51, 153, 255); /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left,rgba(51,153,255,1),rgba(51,153,255,0)); /*Safari 5.1-6*/
-	background: -o-linear-gradient(right,rgba(51,153,255,1),rgba(51,153,255,0)); /*Opera 11.1-12*/
-	background: -moz-linear-gradient(right,rgba(51,153,255,1),rgba(51,153,255,0)); /*Fx 3.6-15*/
-	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); /*Standard*/
+	background: rgb(51, 153, 255);
+	background: -webkit-linear-gradient(left,rgba(51,153,255,1),rgba(51,153,255,0));
+	background: -o-linear-gradient(right,rgba(51,153,255,1),rgba(51,153,255,0));
+	background: -moz-linear-gradient(right,rgba(51,153,255,1),rgba(51,153,255,0));
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	
 	text-align: center;
 	color: #ffffff;
@@ -113,10 +138,34 @@ html, body {
 	background-color: #4dd6e6 !important;
 }
 
-#brand-page {
-	background-color: #ff6666;
+#cell-nav {
+	display: none;
+	border-radius: 0 !important;
 }
 
-#search-page {
-	background-color: #9966ff;
+#cell-search {
+	margin-top: 9.5px;
+	border-radius: 5px;
+	width: 130px;
+	transition: width 0.5s;
+}
+
+#cell-search:focus {
+	width: 200px;
+}
+
+/*For small screen*/
+@media screen and (max-width: 1050px) {
+	.left-bar {
+		display: none;
+	}
+	
+	#cell-nav {
+		display: block;
+	}
+	
+	.content-show {
+		width: 100%;
+		margin-left: 0;
+	}
 }

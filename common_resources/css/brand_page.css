@@ -1,10 +1,39 @@
-.brand-content div {
-	margin: 30px 0px;
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYH.TTC');
+}
+
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYHBD.TTC');
+	font-weight: bold;
+}
+
+.brand-content {
+	font-family: msyh;
+}
+
+.brief-zone {
+	margin-bottom: 6%;
+}
+
+.map-zone {
+	margin-bottom: 3%;
+}
+
+#map {
+	width: 100%;
 }
 
 #brand-title {
 	font-size: 4.5em;
 	font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+	#brand-title {
+		display: none;
+	}
 }
 
 #brand-pro span, #brand-web span, #brand-brief span{
@@ -40,6 +69,16 @@
 	font-size: 1.5em;
 }
 
+#brand-img {
+	max-width: 100%;
+}
+
+.caption {
+	font-size: 1.5em;
+	text-align: center;
+	padding: 5px !important;
+}
+
 #brand-brief p {
 	font-size: 1.5em;
 	text-indent: 42px;
@@ -51,6 +90,10 @@
 	font-size: 1.25em !important;
 	float: right;
 	color: grey;
+}
+
+#map {
+	height: 400px;
 }
 
 .previous {
@@ -67,6 +110,11 @@
 	font-size: 1.5em;
 	border: none;
 	border-radius: 5px;
+	
+	width: 40%;
+	display: inline-block;
+	
+	
 }
 
 .previous:hover {
@@ -87,18 +135,13 @@
 	font-size: 1.5em;
 	border: none;
 	border-radius: 5px;
+	
+	width: 40%;
+	display: inline-block;
+	position: relative;
+	left: 20%;
 }
 
 .next:hover {
 	background-color: rgb(51, 153, 255);
-}
-
-#brand-img {
-	max-width: 100%;
-}
-
-.caption {
-	font-size: 1.5em;
-	text-align: center;
-	padding: 5px !important;
 }

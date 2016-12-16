@@ -1,20 +1,30 @@
-.content-show {
-	width: 75%;
-	margin-left: 25%;
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYH.TTC');
 }
 
-.content-show .brand-group {
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYHBD.TTC');
+	font-weight: bold;
+}
+
+.category-content {
+	font-family: msyh;
+}
+
+.category-content .brand-group {
 	margin-bottom: 38px;
 }
 
-.content-show .capital {
-	font-family: Monospace;
+.category-content .capital {
+	font-family: msyh;
 	font-size: 3em;
 	color: grey;
 	display: block;	
 }
 
-.content-show .item {
+.category-content .item {
 	display: block;
 	width: 75%;
 	padding: 10px;

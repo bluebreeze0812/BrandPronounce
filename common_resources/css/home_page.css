@@ -1,3 +1,18 @@
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYH.TTC');
+}
+
+@fontface {
+	font-family: msyh;
+	src: url('../system/fonts/MSYHBD.TTC');
+	font-weight: bold;
+}
+
+.home-content {
+	font-family: msyh;
+}
+
 .home-content > div {
 	margin: 30px 0px;
 }
