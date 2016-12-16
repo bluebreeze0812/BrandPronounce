@@ -24,7 +24,7 @@ $(document).ready(function() {
 	});
 	
 	$("#lucky").click(function() {
-		$(".content-show").load(base_url + 'feel-lucky', function(responseTxt, statusTxt, xhr) {
+		$(".content-show").load(base_url + 'feel-lucky/', function(responseTxt, statusTxt, xhr) {
 			keep_left_bar(".brand-content");
 			clear_outline();
 		});
